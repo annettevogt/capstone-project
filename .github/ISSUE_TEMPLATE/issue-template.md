@@ -18,6 +18,8 @@ so that **I get an overview about favorite teas**
 for example
 * It's a scrolling list of teas
 * Every list item contains tea name (and tea details) 
+
+Insert screenshot
  
 ## Acceptance criteria
 
@@ -29,7 +31,6 @@ for example
 * [ ]  The Header is always visible
 * [ ]  By scrolling to the top of the app the Header disappears
 
-Insert screenshot
 
 ## Tasks
 
