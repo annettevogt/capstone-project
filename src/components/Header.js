@@ -5,7 +5,7 @@ import teaHeaderIcon from '../icons/teaHeaderIcon.svg'
 export default function Header() {
   return (
     <HeaderStyled>
-      <DivStyled>TEE-EMPFEHLUNGEN</DivStyled>
+      <DivStyled>TasTEA</DivStyled>
       <ImgStyled src={teaHeaderIcon} alt="" />
     </HeaderStyled>
   )
@@ -19,21 +19,21 @@ const HeaderStyled = styled.header`
   border: solid 1px #979797;
   background-color: #837e47;
   font-family: PTSans-Regular, sans-serif;
-  font-size: 27px;
+  font-size: 32px;
   color: #dcdbce;
   font-weight: normal;
-  line-height: 2.37;
+  line-height: 2;
   position: fixed;
   z-index: 1;
 `
 
 const ImgStyled = styled.img`
-  position: fixed;
-  top: 20px;
-  right: 35px;
+  position: absolute;
+  top: 18px;
+  right: 110px;
 `
 const DivStyled = styled.div`
   position: fixed;
   top: 15px;
-  left: 40px;
+  left: 100px;
 `
