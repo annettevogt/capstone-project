@@ -15,7 +15,7 @@ export default createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'DidactGothic', sans-serif;
 }
 
 body {
@@ -35,9 +35,7 @@ main {
   height: 100%;
 }
 
-header {
-  position: fixed;
-  z-index: 1;
-  height: 48px;
+h2 {
+
 }
 `
