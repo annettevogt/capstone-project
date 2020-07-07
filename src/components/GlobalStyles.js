@@ -2,12 +2,11 @@ import { createGlobalStyle } from 'styled-components/macro'
 
 export default createGlobalStyle`
 :root{
-  --primary-dark: #011B1F;
-  --secondary: #344C54;
-  --secondary-40: #AEB7BB;
-  --primary-light: #C9B59E;
-  --primary-light-40: #E6DDD3;
-  --primary-light-8: #FBF9F8;
+  --secondary-dark: #837e47;
+  --secondary-medium-light: #837e47;
+  --secondary-light: #dcdbce;
+  --primary-dark: #837e47;
+  --tertiary-dark: #504831;
   scroll-behavior: smooth;
 }
 
@@ -33,9 +32,5 @@ main {
   display: grid;
   padding: 72px 24px;
   height: 100%;
-}
-
-h2 {
-
 }
 `

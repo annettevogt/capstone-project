@@ -12,28 +12,27 @@ export default function Header() {
 }
 
 const HeaderStyled = styled.header`
-  width: 373px;
-  height: 95px;
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  grid-gap: 5px;
+  justify-items: center;
+  align-items: center;
   opacity: 0.97;
-  border-radius: 4px;
-  border: solid 1px #979797;
+  border: solid #979797;
   background-color: #837e47;
   font-family: PTSans-Regular, sans-serif;
   font-size: 32px;
   color: #dcdbce;
   font-weight: normal;
   line-height: 2;
-  position: fixed;
   z-index: 1;
 `
 
 const ImgStyled = styled.img`
-  position: absolute;
-  top: 18px;
-  right: 110px;
+  position: relative;
+  margin-bottom: 10px;
+  grid-column-start: 3;
 `
 const DivStyled = styled.div`
-  position: fixed;
-  top: 15px;
-  left: 100px;
+  grid-column-start: 2;
 `

@@ -5,7 +5,6 @@ import GlobalStyles from './GlobalStyles'
 export default {
   title: 'Header',
   component: Header,
-  // decorators: [(storyFn) => <Header>{storyFn()}</Header>],
 }
 
 export const ToStorybook = () => (
