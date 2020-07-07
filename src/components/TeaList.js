@@ -1,5 +1,5 @@
 import React from 'react'
-import GlobalStyles from '../components/GlobalStyles'
+// import GlobalStyles from '../components/GlobalStyles'
 
 export default function TeaList() {
   return (
