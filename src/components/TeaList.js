@@ -1,12 +1,11 @@
 import React from 'react'
+import TeaListItem from './TeaListItem'
 // import GlobalStyles from '../components/GlobalStyles'
 
 export default function TeaList() {
   return (
-    <div>
-      <section>
-        <ul></ul>
-      </section>
-    </div>
+    <ul>
+      <TeaListItem />
+    </ul>
   )
 }
