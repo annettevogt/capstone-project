@@ -15,7 +15,6 @@ const HeaderStyled = styled.header`
   display: grid;
   grid-template-columns: 1fr auto auto 1fr;
   grid-gap: 5px;
-  justify-items: center;
   align-items: center;
   opacity: 0.97;
   border: solid #979797;
@@ -23,9 +22,7 @@ const HeaderStyled = styled.header`
   font-family: PTSans-Regular, sans-serif;
   font-size: 32px;
   color: #dcdbce;
-  font-weight: normal;
   line-height: 2;
-  z-index: 1;
 `
 
 const ImgStyled = styled.img`

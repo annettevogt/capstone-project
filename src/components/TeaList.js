@@ -25,7 +25,7 @@ const TeaListStyled = styled.ul`
 const Li = styled.li`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   background-color: var(--secondary-light);
 `
 
@@ -35,8 +35,7 @@ const H2 = styled.h2`
   grid-row-start: 1;
   align-self: center;
   padding: 6px;
-  margin: 5px 10px;
-  font-family: PTSans-Regular, sans-serif;
+  margin: 5px 15px;
   color: var(--primary-dark);
   font-size: 26px;
   font-weight: normal;
@@ -52,7 +51,7 @@ const Img = styled.img`
 
 const H3 = styled.h3`
   grid-column-start: 3;
-  grid-column-end: 8;
+  grid-column-end: 7;
   grid-row-start: 2;
   margin-bottom: 10px;
   font-family: DidactGothic, sans-serif;
@@ -72,7 +71,7 @@ const P = styled.p`
   padding: 12px;
   border-radius: 5px;
   background-color: var(--secondary-medium-light);
-  font-family: DidactGothic, sans-serif;
+  /* font-family: DidactGothic, sans-serif; */
   font-size: 19px;
   font-weight: normal;
   color: var(--tertiary-dark);
@@ -81,4 +80,5 @@ const Line = styled.div`
   grid-column-start: 1;
   grid-column-end: 8;
   border-bottom: solid 1px var(--primary-light);
+  padding: 20px 0px;
 `

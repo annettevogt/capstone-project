@@ -19,6 +19,7 @@ export default createGlobalStyle`
 
 body {
   display: grid;
+  font-family: DidactGothic, sans-serif;
 }
 
 main {
