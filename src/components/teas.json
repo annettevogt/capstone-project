@@ -1,15 +1,18 @@
 [
   {
+    "id": 1,
     "tea_name": "Vietnamese Oolong",
     "point_purchase": "Connewitzer Teeladen, Leipzig",
     "description": "Duftiges Aroma von Orchidee. Subtiles, lang anhaltendes Bukett von Veilchen. Tee mit edlem Charakter."
   },
   {
+    "id": 2,
     "tea_name": "Milky Oolong",
     "point_purchase": "Biomare, Leipzig-Connewitz",
     "description": ""
   },
   {
+    "id": 2,
     "tea_name": "Gunpowder",
     "point_purchase": "Bioladen Macis, Leipzig",
     "description": ""
