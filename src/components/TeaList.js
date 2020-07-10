@@ -10,7 +10,7 @@ export default function TeaList() {
         <Li key={tea.id}>
           <H2>{tea.tea_name}</H2>
           <Img src={MapPinIcon} alt="" />
-          <H3>{tea.point_purchase}</H3>
+          <H3>Hier gekauft: {tea.point_purchase}</H3>
           <P>{tea.description}</P>
           <Line />
         </Li>
@@ -34,8 +34,8 @@ const H2 = styled.h2`
   grid-column-end: 7;
   grid-row-start: 1;
   align-self: center;
-  padding: 6px;
-  margin: 5px 15px;
+  padding: 6px 5px;
+  margin: 15px;
   color: var(--primary-dark);
   font-size: 26px;
   font-weight: normal;
@@ -53,7 +53,6 @@ const H3 = styled.h3`
   grid-column-start: 3;
   grid-column-end: 7;
   grid-row-start: 2;
-  margin-bottom: 10px;
   font-family: DidactGothic, sans-serif;
   color: var(--primary-dark);
   font-size: 22px;
@@ -66,12 +65,10 @@ const P = styled.p`
   grid-column-end: 7;
   grid-row-start: 3;
   grid-row-end: 5;
-  text-align: justify-all;
   align-self: center;
   padding: 12px;
   border-radius: 5px;
   background-color: var(--secondary-medium-light);
-  /* font-family: DidactGothic, sans-serif; */
   font-size: 19px;
   font-weight: normal;
   color: var(--tertiary-dark);
@@ -80,5 +77,5 @@ const Line = styled.div`
   grid-column-start: 1;
   grid-column-end: 8;
   border-bottom: solid 1px var(--primary-light);
-  padding: 20px 0px;
+  padding: 10px 0px;
 `
