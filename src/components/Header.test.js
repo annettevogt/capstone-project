@@ -1,12 +1,18 @@
+import '@testing-library/jest-dom/extend-expect'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render, screen } from '@testing-library/react'
 import Header from './Header'
 
-describe('Header.test.js', () => {
-  it('renders a header tag with the text TasTEA', () => {
-    const div = document.createElement('div')
-    ReactDOM.render(<Header />, div)
+beforeEach(() => {
+  render(<Header></Header>)
+})
 
-    expect(div.querySelector('Header').textContent).toBe('TasTEA')
+describe('Header.test.js', () => {
+  it('should render a header tag with the text TasTEA', () => {
+    expect(screen.getByText('TasTEA')).toBeInTheDocument()
+  })
+
+  it('should consist a header with an img tag', () => {
+    expect(screen.getByRole('img')).toBeInTheDocument()
   })
 })

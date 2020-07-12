@@ -1,12 +1,13 @@
 import React from 'react'
 import Header from './components/Header'
 import TeaList from './components/TeaList'
+import teas from './components/teas.json'
 
 function App() {
   return (
     <div>
       <Header />
-      <TeaList />
+      <TeaList teas={teas} />
     </div>
   )
 }
