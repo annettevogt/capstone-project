@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="41px" viewBox="0 0 35 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Ort</title>
+    <defs>
+        <filter x="-69.7%" y="-69.7%" width="239.4%" height="239.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.141176471   0 0 0 0 0.203921569   0 0 0 0 0.28627451  0 0 0 0.277534965 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter id="filter-2">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.513725 0 0 0 0 0.494118 0 0 0 0 0.278431 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+        <filter id="filter-3">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.513725 0 0 0 0 0.494118 0 0 0 0 0.278431 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+        <path d="M16.5,5.94237695 C12.4878067,5.94237695 9.23529412,9.22040194 9.23529412,13.2734232 C9.23529412,16.2372605 10.543979,19.1173144 12.1650462,21.5156139 C13.7394118,23.8615487 15.5452101,25.6628915 16.5,26.542617 C17.4547899,25.6628915 19.2605882,23.8615487 20.8349538,21.5156139 C22.456021,19.1173144 23.7647059,16.2372605 23.7647059,13.2734232 C23.7647059,9.22040194 20.5121933,5.94237695 16.5,5.94237695 Z M7,13.4633547 C7,8.17251262 11.2528333,3.88235294 16.5,3.88235294 C21.7471667,3.88235294 26,8.17251262 26,13.4633547 C26,17.0828443 24.4156111,20.4255493 22.656,23.0443565 C20.8868889,25.6631636 18.8707778,27.6538829 17.8511111,28.590692 C17.0795,29.2932988 15.9205,29.2932988 15.1488889,28.590692 C14.1292222,27.6538829 12.1131111,25.6631636 10.344,23.0443565 C8.58438889,20.4255493 7,17.0828443 7,13.4633547 Z M16.2205882,11.607443 C14.8324706,11.607443 13.7058824,12.6503301 13.7058824,13.92497 C13.7058824,15.1996098 14.8324706,16.242497 16.2205882,16.242497 C17.6087059,16.242497 18.7352941,15.1996098 18.7352941,13.92497 C18.7352941,12.6503301 17.6087059,11.607443 16.2205882,11.607443 Z M12.0294118,13.152461 C12.0294118,10.8761345 13.906011,9.03241297 16.2205882,9.03241297 C18.5351654,9.03241297 20.4117647,10.8761345 20.4117647,13.152461 C20.4117647,15.4287875 18.5351654,17.272509 16.2205882,17.272509 C13.906011,17.272509 12.0294118,15.4287875 12.0294118,13.152461 L12.0294118,13.152461 Z" id="path-4"></path>
+        <filter x="-10.5%" y="-7.9%" width="121.1%" height="115.9%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Layout-Capstone-Project-Input-Page-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Input-Page-1-New-0707.2020" transform="translate(-54.000000, -198.000000)">
+            <g id="icon-" transform="translate(55.000000, 198.000000)" filter="url(#filter-1)">
+                <g id="Group" opacity="0">
+                    <g filter="url(#filter-2)" id="Box">
+                        <g>
+                            <rect id="Rectangle" fill="#FFFFFF" opacity="0.701450893" x="0" y="0" width="33" height="33" rx="8"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group" opacity="0">
+                    <g filter="url(#filter-3)" id="Container">
+                        <g>
+                            <rect id="view-box" fill="#F7F9FC" x="0" y="0" width="33" height="33"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g id="Fill-1100">
+                    <use fill="#2C3F58" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
