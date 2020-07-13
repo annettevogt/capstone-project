@@ -1,25 +1,40 @@
 import React from 'react'
+import GlobalStyles from './GlobalStyles'
+import { addDecorator } from '@storybook/react'
 import styled from 'styled-components'
+import TeaListItem from './TeaListItem'
 import MapPinIcon from '../icons/MapPinIcon.svg'
 
-export default function TeaListItem({
-  tea: { name, pointPurchase, description },
-}) {
-  return (
-    <StyledListItem data-testid="tea-list-entry">
-      <StyledH2 data-testid="h2-test">{name}</StyledH2>
-      <StyledImg data-testid="img-test" src={MapPinIcon} alt="" />
-      <StyledH3>Hier gekauft: {pointPurchase}</StyledH3>
-      <StyledP>{description}</StyledP>
-      <StyledLine />
-    </StyledListItem>
-  )
+addDecorator((storyFn) => (
+  <>
+    <GlobalStyles />
+    {storyFn()}
+  </>
+))
+
+export default {
+  title: 'TeaListItem',
+  component: TeaListItem,
 }
+
+export const withExampleData = () => (
+  <StyledListItem key={'1'}>
+    <StyledH2>{'Vietnamese Oolong'}</StyledH2>
+    <StyledImg src={MapPinIcon} alt="" />
+    <StyledH3>Hier gekauft: {'Connewitzer Teeladen, Leipzig'}</StyledH3>
+    <StyledP>
+      {
+        'Duftiges Aroma von Orchidee. Subtiles, lang anhaltendes Bukett von Veilchen. Tee mit edlem Charakter.'
+      }
+    </StyledP>
+    <StyledLine />
+  </StyledListItem>
+)
 
 const StyledListItem = styled.li`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 1fr auto auto;
+  grid-template-rows: repeat(4, 1fr);
   background-color: var(--secondary-light);
 `
 
@@ -47,7 +62,6 @@ const StyledH3 = styled.h3`
   grid-column-start: 3;
   grid-column-end: 7;
   grid-row-start: 2;
-  margin-bottom: 18px;
   font-family: DidactGothic, sans-serif;
   color: var(--primary-dark);
   font-size: 22px;
@@ -59,7 +73,7 @@ const StyledP = styled.p`
   grid-column-start: 2;
   grid-column-end: 7;
   grid-row-start: 3;
-  grid-row-end: 3;
+  grid-row-end: 5;
   align-self: center;
   padding: 12px;
   border-radius: 5px;
@@ -72,5 +86,5 @@ const StyledLine = styled.div`
   grid-column-start: 1;
   grid-column-end: 8;
   border-bottom: solid 1px var(--primary-light);
-  padding: 15px 0px;
+  padding: 10px 0px;
 `

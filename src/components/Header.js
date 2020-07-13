@@ -5,8 +5,8 @@ import teaHeaderIcon from '../icons/teaHeaderIcon.svg'
 export default function Header() {
   return (
     <HeaderStyled>
-      <DivStyled>TasTEA</DivStyled>
-      <ImgStyled src={teaHeaderIcon} alt="" />
+      <HeadlineText>TasTEA</HeadlineText>
+      <HeadlineImg src={teaHeaderIcon} alt="" />
     </HeaderStyled>
   )
 }
@@ -23,13 +23,16 @@ const HeaderStyled = styled.header`
   font-size: 32px;
   color: #dcdbce;
   line-height: 2;
+  /* position: fixed; */
+  z-index: 100;
+  width: 100%;
 `
 
-const ImgStyled = styled.img`
+const HeadlineImg = styled.img`
   position: relative;
   margin-bottom: 10px;
   grid-column-start: 3;
 `
-const DivStyled = styled.div`
+const HeadlineText = styled.div`
   grid-column-start: 2;
 `

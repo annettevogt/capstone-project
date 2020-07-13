@@ -18,15 +18,6 @@ export default createGlobalStyle`
 }
 
 body {
-  display: grid;
   font-family: DidactGothic, sans-serif;
-}
-
-main {
-  overflow: scroll;
-  line-height: 1.5;
-  display: grid;
-  padding: 72px 24px;
-  height: 100%;
 }
 `
