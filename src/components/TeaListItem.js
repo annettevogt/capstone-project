@@ -48,7 +48,7 @@ const StyledH3 = styled.h3`
   grid-column-end: 7;
   grid-row-start: 2;
   margin-bottom: 18px;
-  font-family: DidactGothic, sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   color: var(--primary-dark);
   font-size: 22px;
   font-weight: normal;

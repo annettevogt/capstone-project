@@ -16,8 +16,6 @@ export default function App() {
 }
 const AppGrid = styled.div`
   display: grid;
-
-  /* grid-template-rows:  */
   height: 100vh;
 `
 const Main = styled.main`

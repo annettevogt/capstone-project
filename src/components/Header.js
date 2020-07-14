@@ -19,7 +19,7 @@ const HeaderStyled = styled.header`
   opacity: 0.97;
   border: solid #979797;
   background-color: #837e47;
-  font-family: PTSans-Regular, sans-serif;
+  font-family: 'PTSans Regular', sans-serif;
   font-size: 32px;
   color: #dcdbce;
   line-height: 2;

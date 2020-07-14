@@ -18,6 +18,7 @@ export default createGlobalStyle`
 }
 
 body {
-  font-family: DidactGothic, sans-serif;
+  font-family: "Didact Gothic", sans-serif;
+  overscroll-behavior: none;
 }
 `
