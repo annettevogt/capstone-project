@@ -1,104 +1,118 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import * as yup from 'yup'
 
-// const projectSchema = yup.object().shape({
-//   name: yup.string().min(5).max(30).required(),
-//   pointPurchase: yup.string().min(10).max(30).required(),
-//   description: yup.string().min(10).max(300).required(),
-// })
+const projectSchema = yup.object().shape({
+  name: yup.string().min(5).max(30).required(),
+  pointPurchase: yup.string().min(10).max(30).required(),
+  description: yup.string().min(10).max(300).required(),
+})
 
-// export default function AddNewProjectForm({ updateProjectList }) {
-//   const { register, handleSubmit, errors } = useForm({
-//     resolver: yupResolver(projectSchema),
-//   })
+export default function InputForm({ setTea }) {
+  const [newTea, setNewTea] = useState({
+    name: '',
+    pointPurchase: '',
+    description: '',
+    resolver: yupResolver(projectSchema),
+  })
 
-export default function InputForma() {
-  const { register, handleSubmit, errors } = useForm()
   const onSubmit = (data) => console.log(data)
 
   return (
-    <StyledForm onSubmit={handleSubmit(onSubmit)}>
-      <StyledH2>Füge einen neuen Lieblingstee hinzu.</StyledH2>
-      <StyledLabel>
-        Name des Tees:
-        <StyledInput
-          name="name"
-          placeholder="Z.B. Milky Oolong"
-          ref={register({
-            required: true,
-            minLength: 5,
-            maxLength: 30,
-          })}
-        />
-        {errors.name && errors.name.type === 'required' && (
-          <StyledParagraph>Your name is required.</StyledParagraph>
-        )}
-        {errors.name && errors.name.type === 'minLength' && (
-          <StyledParagraph>
-            Your name requires at least 5 characters.
-          </StyledParagraph>
-        )}
-        {errors.name && errors.name.type === 'maxLength' && (
-          <StyledParagraph>
-            Your name allows maximal 30 characters.
-          </StyledParagraph>
-        )}
-      </StyledLabel>
-      <StyledLabel>
-        Hier gekauft:
-        <StyledInput
-          name="pointPurchase"
-          placeholder="Z.B. Bioladen Macis, Leipzig"
-          ref={register({
-            required: true,
-            minLength: 10,
-            maxLength: 30,
-          })}
-        />
-        {errors.pointPurchase && errors.pointPurchase.type === 'required' && (
-          <StyledParagraph>Your point of purchase is required.</StyledParagraph>
-        )}
-        {errors.pointPurchase && errors.pointPurchase.type === 'minLength' && (
-          <StyledParagraph>
-            Your point of purchase requires at least 10 characters.
-          </StyledParagraph>
-        )}
-        {errors.name && errors.name.type === 'maxLength' && (
-          <StyledParagraph>
-            Your name allows maximal 30 characters.
-          </StyledParagraph>
-        )}
-      </StyledLabel>
-      <StyledLabel>
-        Beschreibe Deinen Lieblingstee:
-        <StyledTextarea
-          name="description"
-          placeholder="Z.B. fruchtig-sahniges Bukett. Aromen von Aprikose und süßer Milch."
-          ref={register({
-            required: true,
-            minLength: 10,
-            maxLength: 300,
-          })}
-        />
-        {errors.description && errors.description.type === 'required' && (
-          <StyledParagraph>Your description is required.</StyledParagraph>
-        )}
-        {errors.description && errors.description.type === 'minLength' && (
-          <StyledParagraph>
-            Your description requires at least 10 characters.
-          </StyledParagraph>
-        )}
-        {errors.description && errors.description.type === 'maxLength' && (
-          <StyledParagraph>
-            Your description allows maximal 300 characters.
-          </StyledParagraph>
-        )}
-      </StyledLabel>
-      <StyledAddButton type="submit">Add</StyledAddButton>
-      <StyledLine></StyledLine>
-    </StyledForm>
+    <>
+      <StyledForm onSubmit={handleSubmit}>
+        <StyledH2>Füge einen neuen Lieblingstee hinzu.</StyledH2>
+        <StyledLabel>
+          Name des Tees:
+          <StyledInput
+            name="name"
+            onChange={handleChange}
+            value={newTea.name}
+            type="text"
+            placeholder="Z.B. Milky Oolong"
+            autoFocus
+            minLength="5"
+            maxLength="30"
+            required
+          />
+          {newTea.name.length < 5 && (
+            <StyledError>Your name requires at least 5 characters.</StyledError>
+          )}
+          {newTea.name.length > 30 && (
+            <StyledError> Your name allows maximum 30 characters.</StyledError>
+          )}
+        </StyledLabel>
+        <StyledLabel>
+          Hier gekauft:
+          <StyledInput
+            name="pointPurchase"
+            onChange={handleChange}
+            value={newTea.pointPurchase}
+            type="text"
+            placeholder="Z.B. Bioladen Macis, Leipzig"
+            minLength="10"
+            maxLength="30"
+            required
+          />
+          {newTea.pointPurchase.length < 10 && (
+            <StyledError>
+              Your point of purchase requires at least 10 characters.
+            </StyledError>
+          )}
+          {newTea.pointPurchase.length >= 30 && (
+            <StyledError>
+              {' '}
+              Your point of purchase allows maximum 30 characters.
+            </StyledError>
+          )}
+        </StyledLabel>
+        <StyledLabel>
+          Beschreibe Deinen Lieblingstee:
+          <StyledTextarea
+            name="description"
+            onChange={handleChange}
+            value={newTea.description}
+            type="text"
+            placeholder="Z.B. fruchtig-sahniges Bukett. Aromen von Aprikose und süßer Milch."
+            minLength="10"
+            maxLength="300"
+            required
+          />
+          {newTea.description.length < 10 && (
+            <StyledError>
+              Your description of purchase requires at least 10 characters.
+            </StyledError>
+          )}
+          {newTea.description.length > 300 && (
+            <StyledError>
+              {' '}
+              Your description allows maximum 300 characters.
+            </StyledError>
+          )}
+        </StyledLabel>
+        <StyledAddButton type="submit">Add</StyledAddButton>
+        <StyledLine></StyledLine>
+      </StyledForm>
+    </>
   )
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    setTea(newTea)
+    setNewTea({
+      name: '',
+      pointPurchase: '',
+      description: '',
+    })
+  }
+
+  function handleChange(event) {
+    setNewTea({
+      ...newTea,
+      [event.target.name]: event.target.value,
+    })
+  }
 }
 
 const StyledForm = styled.form`
@@ -188,7 +202,7 @@ const StyledAddButton = styled.button`
   }
 `
 
-const StyledParagraph = styled.p`
+const StyledError = styled.p`
   font-family: 'Didact Gothic', sans-serif;
   color: var(--tertiary-medium-dark);
   font-size: 16px;
