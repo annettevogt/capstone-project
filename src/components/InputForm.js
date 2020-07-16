@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form'
 import styled from 'styled-components'
 
 // const projectSchema = yup.object().shape({
-//   name: yup.string().min(5).max(40).required(),
-//   pointPurchase: yup.string().min(10).max(40).required(),
+//   name: yup.string().min(5).max(30).required(),
+//   pointPurchase: yup.string().min(10).max(30).required(),
 //   description: yup.string().min(10).max(300).required(),
 // })
 
@@ -28,6 +28,7 @@ export default function InputForma() {
           ref={register({
             required: true,
             minLength: 5,
+            maxLength: 30,
           })}
         />
         {errors.name && errors.name.type === 'required' && (
@@ -36,6 +37,11 @@ export default function InputForma() {
         {errors.name && errors.name.type === 'minLength' && (
           <StyledParagraph>
             Your name requires at least 5 characters.
+          </StyledParagraph>
+        )}
+        {errors.name && errors.name.type === 'maxLength' && (
+          <StyledParagraph>
+            Your name allows maximal 30 characters.
           </StyledParagraph>
         )}
       </StyledLabel>
@@ -47,6 +53,7 @@ export default function InputForma() {
           ref={register({
             required: true,
             minLength: 10,
+            maxLength: 30,
           })}
         />
         {errors.pointPurchase && errors.pointPurchase.type === 'required' && (
@@ -54,7 +61,12 @@ export default function InputForma() {
         )}
         {errors.pointPurchase && errors.pointPurchase.type === 'minLength' && (
           <StyledParagraph>
-            Your point of purchase requires at least 5 characters.
+            Your point of purchase requires at least 10 characters.
+          </StyledParagraph>
+        )}
+        {errors.name && errors.name.type === 'maxLength' && (
+          <StyledParagraph>
+            Your name allows maximal 30 characters.
           </StyledParagraph>
         )}
       </StyledLabel>
@@ -65,7 +77,7 @@ export default function InputForma() {
           placeholder="Z.B. fruchtig-sahniges Bukett. Aromen von Aprikose und süßer Milch."
           ref={register({
             required: true,
-            minLength: 20,
+            minLength: 10,
             maxLength: 300,
           })}
         />
@@ -74,7 +86,7 @@ export default function InputForma() {
         )}
         {errors.description && errors.description.type === 'minLength' && (
           <StyledParagraph>
-            Your description requires at least 5 characters.
+            Your description requires at least 10 characters.
           </StyledParagraph>
         )}
         {errors.description && errors.description.type === 'maxLength' && (
