@@ -3,14 +3,18 @@ import Header from './components/Header'
 import TeaList from './components/TeaList'
 import teas from './components/teas.json'
 import styled from 'styled-components'
+import InputForm from './components/InputForm'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
     <AppGrid>
       <Header />
       <Main>
+        <InputForm />
         <TeaList teas={teas} />
       </Main>
+      {/* <Footer /> */}
     </AppGrid>
   )
 }

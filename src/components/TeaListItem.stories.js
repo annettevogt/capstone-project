@@ -47,7 +47,6 @@ const StyledH2 = styled.h2`
   margin: 15px;
   color: var(--primary-dark);
   font-size: 26px;
-  font-weight: normal;
   line-height: 1.64;
   font-stretch: normal;
 `
@@ -65,7 +64,6 @@ const StyledH3 = styled.h3`
   font-family: DidactGothic, sans-serif;
   color: var(--primary-dark);
   font-size: 22px;
-  font-weight: normal;
   line-height: 1.44;
 `
 
@@ -79,8 +77,7 @@ const StyledP = styled.p`
   border-radius: 5px;
   background-color: var(--secondary-medium-light);
   font-size: 19px;
-  font-weight: normal;
-  color: var(--tertiary-dark);
+  color: var(--tertiary-medium-dark);
 `
 const StyledLine = styled.div`
   grid-column-start: 1;
