@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import teaHeaderIcon from '../icons/teaHeaderIcon.svg'
+import TeaHeaderIcon from '../icons/TeaHeaderIcon.svg'
 
 export default function Header() {
   return (
     <HeaderStyled>
       <HeadlineText>TasTEA</HeadlineText>
-      <HeadlineImg src={teaHeaderIcon} alt="" />
+      <HeadlineImg src={TeaHeaderIcon} alt="" />
     </HeaderStyled>
   )
 }

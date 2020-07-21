@@ -1,29 +1,34 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
-import wurst from './components/teas.json'
+import teas from './components/teas.json'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import InputNewTea from './pages/InputNewTea'
 import TeaListPage from './pages/TeaListPage'
+
 // import Footer from './components/Footer'
 
 export default function App() {
   const [teas, setTeas] = useState([])
+
+  useEffect(function () {
+    setTeas(teas)
+  }, [])
 
   return (
     <AppGrid>
       <Router>
         <Switch>
           <Route exact path="/" component={Home}></Route>
-          <Route path="/inputnewtea" component={InputNewTea}>
+          <Route path="/inputnewtea">
             <Header />
             <InputNewTea setTea={updateTeas} />
           </Route>
-          <Route path="/tealistpage" component={TeaListPage}>
+          <Route path="/tealistpage">
             <Header />
-            <TeaListPage teasjson={wurst} />
+            <TeaListPage teasjson={teas} />
           </Route>
           <Route component={NotFound} />
           {/* <Footer /> */}
@@ -34,6 +39,7 @@ export default function App() {
 
   function updateTeas(newTea) {
     setTeas([...teas, newTea])
+    console.log(newTea)
   }
 }
 const AppGrid = styled.div`

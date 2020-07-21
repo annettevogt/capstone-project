@@ -9,7 +9,7 @@ const projectSchema = yup.object().shape({
   description: yup.string().min(10).max(300).required(),
 })
 
-export default function InputForm({ setTeawurst }) {
+export default function InputForm({ setTea }) {
   const [newTea, setNewTea] = useState({
     name: '',
     pointPurchase: '',
@@ -100,7 +100,7 @@ export default function InputForm({ setTeawurst }) {
 
   function handleSubmit(event) {
     event.preventDefault()
-    setTeawurst(newTea)
+    setTea(newTea)
     setNewTea({
       name: '',
       pointPurchase: '',

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="93px" height="90px" viewBox="0 0 93 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <defs>
+        <filter x="-77.9%" y="-83.8%" width="255.8%" height="267.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter id="filter-2">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.847000 0 0 0 0 0.847000 0 0 0 0 0.847000 0 0 0 0.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Layout-Capstone-Project-Input-Page-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Input-Page-2-New-07.07.2020" transform="translate(-27.000000, -125.000000)">
+            <g id="Group-2" filter="url(#filter-1)" transform="translate(52.000000, 150.000000)">
+                <g id="icon-">
+                    <g id="Container" filter="url(#filter-2)">
+                        <g>
+                            <rect id="view-box" fill="#F7F9FC" x="0" y="0" width="43" height="40"></rect>
+                        </g>
+                    </g>
+                    <path d="M20.7833333,5.71428571 C29.0952188,5.71428571 35.8333333,12.4300145 35.8333333,20.7142857 C35.8333333,28.998557 29.0952188,35.7142857 20.7833333,35.7142857 C12.4714478,35.7142857 5.73333333,28.998557 5.73333333,20.7142857 C5.73333333,12.4300145 12.4714478,5.71428571 20.7833333,5.71428571 Z M20.7833333,8.02197802 C13.7501995,8.02197802 8.04871795,13.7045177 8.04871795,20.7142857 C8.04871795,27.7240537 13.7501995,33.4065934 20.7833333,33.4065934 C27.8164672,33.4065934 33.5179487,27.7240537 33.5179487,20.7142857 C33.5179487,13.7045177 27.8164672,8.02197802 20.7833333,8.02197802 Z M20.2355017,15.2687071 C20.6484466,15.6762409 20.6889737,16.3169415 20.355002,16.7702074 L20.2434094,16.9003086 L15.6549519,21.5169883 L20.2261431,26.020777 C20.6394726,26.4280119 20.6805391,27.0687475 20.3469102,27.522339 L20.2355017,27.6524586 C19.7859652,28.105611 19.0529668,28.1097529 18.5983039,27.6617099 L13.0944155,22.2379577 C12.7393099,21.8889565 12.700882,21.341201 12.9807646,20.9488382 L13.0868976,20.8242862 L13.0868976,20.8242862 L18.5982975,15.2767536 C19.0481696,14.8239321 19.7811709,14.8203296 20.2355017,15.2687071 Z" id="Shape" fill="#2C3F58" fill-rule="nonzero" style="mix-blend-mode: darken;"></path>
+                </g>
+                <line x1="15.8" y1="22" x2="30.3454545" y2="22" id="Line-3" stroke="#2C3F58" stroke-width="2" fill="#2C3F58" stroke-linecap="square"></line>
+            </g>
+        </g>
+    </g>
+</svg>
