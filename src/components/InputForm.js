@@ -9,7 +9,7 @@ const projectSchema = yup.object().shape({
   description: yup.string().min(10).max(300).required(),
 })
 
-export default function InputForm({ setTea }) {
+export default function InputForm({ setTeawurst }) {
   const [newTea, setNewTea] = useState({
     name: '',
     pointPurchase: '',
@@ -17,15 +17,14 @@ export default function InputForm({ setTea }) {
     resolver: yupResolver(projectSchema),
   })
 
-  const onSubmit = (data) => console.log(data)
-
   return (
-    <>
+    <main>
       <StyledForm onSubmit={handleSubmit}>
         <StyledH2>Füge einen neuen Lieblingstee hinzu.</StyledH2>
-        <StyledLabel>
+        <StyledLabel htmlFor="name">
           Name des Tees:
           <StyledInput
+            id="name"
             name="name"
             onChange={handleChange}
             value={newTea.name}
@@ -43,9 +42,10 @@ export default function InputForm({ setTea }) {
             <StyledError> Your name allows maximum 30 characters.</StyledError>
           )}
         </StyledLabel>
-        <StyledLabel>
+        <StyledLabel htmlFor="pointPurchase">
           Hier gekauft:
           <StyledInput
+            id="pointPurchase"
             name="pointPurchase"
             onChange={handleChange}
             value={newTea.pointPurchase}
@@ -67,10 +67,11 @@ export default function InputForm({ setTea }) {
             </StyledError>
           )}
         </StyledLabel>
-        <StyledLabel>
+        <StyledLabel htmlFor="description">
           Beschreibe Deinen Lieblingstee:
           <StyledTextarea
             name="description"
+            id="description"
             onChange={handleChange}
             value={newTea.description}
             type="text"
@@ -94,12 +95,12 @@ export default function InputForm({ setTea }) {
         <StyledAddButton type="submit">Add</StyledAddButton>
         <StyledLine></StyledLine>
       </StyledForm>
-    </>
+    </main>
   )
 
   function handleSubmit(event) {
     event.preventDefault()
-    setTea(newTea)
+    setTeawurst(newTea)
     setNewTea({
       name: '',
       pointPurchase: '',

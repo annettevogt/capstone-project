@@ -24,6 +24,11 @@ body {
   overscroll-behavior: none;
 }
 
+main {
+  overflow-y: scroll;
+  line-height: 1.5;
+}
+
 h2 {
   color: var(--primary-dark);
   font-size: 26px;

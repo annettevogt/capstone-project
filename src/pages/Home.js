@@ -14,9 +14,11 @@ export default function Header() {
 const HeaderStyled = styled.header`
   display: grid;
   grid-template-columns: 1fr auto auto 1fr;
+  grid-template-rows: 1fr 1fr auto 1fr;
   height: 100%;
+  width: 100%;
   grid-gap: 5px;
-  align-items: center;
+  align-items: end;
   opacity: 0.97;
   border: 1px solid var(--primary-light);
   background-color: var(--secondary-dark);
@@ -24,9 +26,7 @@ const HeaderStyled = styled.header`
   font-size: 32px;
   color: var(--secondary-medium-light);
   line-height: 2;
-  /* position: fixed; */
   z-index: 100;
-  width: 100%;
 `
 
 const HeadlineImg = styled.img`

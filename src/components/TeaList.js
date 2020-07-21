@@ -2,13 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import TeaListItem from './TeaListItem.js'
 
-export default function TeaList({ teas }) {
+export default function TeaList({ nochwurster }) {
   return (
-    <TeaListStyled>
-      {teas.map((tea) => (
-        <TeaListItem tea={tea} key={tea.id} />
-      ))}
-    </TeaListStyled>
+    <main>
+      <TeaListStyled>
+        {nochwurster.map((tea) => (
+          <TeaListItem tea={tea} key={tea.id} />
+        ))}
+      </TeaListStyled>
+    </main>
   )
 }
 
