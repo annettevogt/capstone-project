@@ -27,6 +27,7 @@ body {
 main {
   overflow-y: scroll;
   line-height: 1.5;
+  position: relative;
 }
 
 h2 {

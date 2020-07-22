@@ -1,13 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import TeaHeaderIcon from '../icons/TeaHeaderIcon.svg'
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <HeaderStyled>
-      <HeadlineText>TasTEA</HeadlineText>
-      <HeadlineImg src={TeaHeaderIcon} alt="" />
-    </HeaderStyled>
+    <NavLink to="/inputnewtea">
+      <HeaderStyled>
+        <HeadlineText>TasTEA</HeadlineText>
+        <HeadlineImg src={TeaHeaderIcon} alt="" />
+      </HeaderStyled>
+    </NavLink>
   )
 }
 

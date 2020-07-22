@@ -7,7 +7,6 @@ import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import InputNewTea from './pages/InputNewTea'
 import TeaListPage from './pages/TeaListPage'
-import Footer from './components/Footer'
 
 export default function App() {
   const [teas, setTeas] = useState([])
@@ -28,7 +27,6 @@ export default function App() {
           <Route path="/tealistpage">
             <Header />
             <TeaListPage teasjson={teas} />
-            <Footer />
           </Route>
           <Route component={NotFound} />
         </Switch>
