@@ -16,7 +16,7 @@ export default function TeaList({ teas }) {
       </main>
       <StyledFooter>
         <NavLink to="/inputnewtea">
-          <HeadlineImg src={AddButtonIcon} alt="" />
+          <img src={AddButtonIcon} alt="" />
         </NavLink>
       </StyledFooter>
     </>
@@ -34,5 +34,3 @@ const StyledFooter = styled.div`
   padding-top: 5px;
   background-color: var(--secondary-light);
 `
-
-const HeadlineImg = styled.img``
