@@ -1,13 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import TeaHeaderIcon from '../icons/TeaHeaderIcon.svg'
-import { NavLink } from 'react-router-dom'
 
 export default function Header() {
   return (
     <HeaderStyled>
-      <NavLink to="/inputnewtea">Add new tea</NavLink>
-      <NavLink to="/tealistpage">List</NavLink>
       <HeadlineText>TasTEA</HeadlineText>
       <HeadlineImg src={TeaHeaderIcon} alt="" />
     </HeaderStyled>
@@ -27,7 +24,6 @@ const HeaderStyled = styled.header`
   font-size: 32px;
   color: var(--secondary-medium-light);
   line-height: 2;
-  /* position: fixed; */
   z-index: 100;
   width: 100%;
 `

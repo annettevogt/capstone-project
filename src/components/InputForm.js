@@ -1,7 +1,9 @@
-import { yupResolver } from '@hookform/resolvers'
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import { yupResolver } from '@hookform/resolvers'
 import * as yup from 'yup'
+import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
+import BackButton from '../icons/BackButton.svg'
 
 const projectSchema = yup.object().shape({
   name: yup.string().min(5).max(30).required(),
@@ -20,6 +22,11 @@ export default function InputForm({ setTea }) {
   return (
     <main>
       <StyledForm onSubmit={handleSubmit}>
+        <StyledDiv>
+          <NavLink to="/tealistpage">
+            <StyledImg src={BackButton} alt="" />
+          </NavLink>
+        </StyledDiv>
         <StyledH2>Füge einen neuen Lieblingstee hinzu.</StyledH2>
         <StyledLabel htmlFor="name">
           Name des Tees:
@@ -116,6 +123,18 @@ export default function InputForm({ setTea }) {
   }
 }
 
+const StyledDiv = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-start;
+  height: 100%;
+`
+
+const StyledImg = styled.img`
+  height: 60px;
+  margin: 20px 0 0 10px;
+`
+
 const StyledForm = styled.form`
   display: flex;
   justify-content: center;
@@ -123,8 +142,9 @@ const StyledForm = styled.form`
   flex-flow: column wrap;
   background-color: var(--secondary-light);
 `
+
 const StyledH2 = styled.h2`
-  margin: 15px;
+  margin: 1px 15px 15px 20px;
   padding: 6px 5px;
 `
 
@@ -153,6 +173,9 @@ const StyledInput = styled.input`
   :focus {
     outline: solid 1px var(--secondary-dark);
     box-shadow: 0 0 0 1pt var(--secondary-dark);
+  }
+  :-internal-autofill-selected {
+    background-color: var(--secondary-medium-light) !important;
   }
 `
 

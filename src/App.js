@@ -2,19 +2,18 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
-import teas from './components/teas.json'
+import jsonteas from './components/teas.json'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import InputNewTea from './pages/InputNewTea'
 import TeaListPage from './pages/TeaListPage'
-
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 export default function App() {
   const [teas, setTeas] = useState([])
 
   useEffect(function () {
-    setTeas(teas)
+    setTeas(jsonteas)
   }, [])
 
   return (
@@ -29,9 +28,9 @@ export default function App() {
           <Route path="/tealistpage">
             <Header />
             <TeaListPage teasjson={teas} />
+            <Footer />
           </Route>
           <Route component={NotFound} />
-          {/* <Footer /> */}
         </Switch>
       </Router>
     </AppGrid>
