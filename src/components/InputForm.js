@@ -24,7 +24,7 @@ export default function InputForm({ setTea }) {
       <StyledForm onSubmit={handleSubmit}>
         <StyledDiv>
           <NavLink to="/tealistpage">
-            <StyledImg src={BackButton} alt="" />
+            <StyledBackButton src={BackButton} alt="" />
           </NavLink>
         </StyledDiv>
         <StyledH2>Füge einen neuen Lieblingstee hinzu.</StyledH2>
@@ -41,6 +41,7 @@ export default function InputForm({ setTea }) {
             minLength="5"
             maxLength="30"
             required
+            data-testid="tea-name"
           />
           {newTea.name.length < 5 && (
             <StyledError>Your name requires at least 5 characters.</StyledError>
@@ -61,6 +62,7 @@ export default function InputForm({ setTea }) {
             minLength="10"
             maxLength="30"
             required
+            data-testid="point-purchase"
           />
           {newTea.pointPurchase.length < 10 && (
             <StyledError>
@@ -69,7 +71,6 @@ export default function InputForm({ setTea }) {
           )}
           {newTea.pointPurchase.length >= 30 && (
             <StyledError>
-              {' '}
               Your point of purchase allows maximum 30 characters.
             </StyledError>
           )}
@@ -86,6 +87,7 @@ export default function InputForm({ setTea }) {
             minLength="10"
             maxLength="300"
             required
+            data-testid="tea-description"
           />
           {newTea.description.length < 10 && (
             <StyledError>
@@ -94,7 +96,6 @@ export default function InputForm({ setTea }) {
           )}
           {newTea.description.length > 300 && (
             <StyledError>
-              {' '}
               Your description allows maximum 300 characters.
             </StyledError>
           )}
@@ -107,12 +108,19 @@ export default function InputForm({ setTea }) {
 
   function handleSubmit(event) {
     event.preventDefault()
-    setTea(newTea)
-    setNewTea({
-      name: '',
-      pointPurchase: '',
-      description: '',
-    })
+    try {
+      projectSchema.validateSync({
+        name: newTea.name,
+        pointPurchase: newTea.pointPurchase,
+        description: newTea.description,
+      })
+      setTea(newTea)
+      setNewTea({
+        name: '',
+        pointPurchase: '',
+        description: '',
+      })
+    } catch (error) {}
   }
 
   function handleChange(event) {
@@ -130,9 +138,12 @@ const StyledDiv = styled.div`
   height: 100%;
 `
 
-const StyledImg = styled.img`
+const StyledBackButton = styled.img`
   height: 60px;
   margin: 20px 0 0 10px;
+  :focus {
+    outline: solid 1px var(--secondary-dark);
+    box-shadow: 0 0 0 1pt var(--secondary-dark);
 `
 
 const StyledForm = styled.form`
@@ -171,7 +182,7 @@ const StyledInput = styled.input`
     color: var(--tertiary-medium-dark);
   }
   :focus {
-    outline: solid 1px var(--secondary-dark);
+    outline: hidden 1px var(--secondary-dark);
     box-shadow: 0 0 0 1pt var(--secondary-dark);
   }
   :-internal-autofill-selected {
@@ -219,10 +230,9 @@ const StyledAddButton = styled.button`
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.39px;
-
-  :focus {
-    outline: hidden 1px var(--secondary-dark);
-    box-shadow: 0 0 1px 1pt var(--secondary-dark);
+  :active {
+    background-color: var(--secondary-light);
+    color: var(--tertiary-dark);
   }
 `
 

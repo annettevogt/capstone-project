@@ -36,7 +36,6 @@ export default function App() {
 
   function updateTeas(newTea) {
     setTeas([...teas, newTea])
-    console.log(newTea)
   }
 }
 const AppGrid = styled.div`

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="113px" height="113px" viewBox="0 0 113 113" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <defs>
+        <filter x="-76.4%" y="-76.4%" width="252.8%" height="252.8%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="9.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Layout-Capstone-Project-Input-Page-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" filter="url(#filter-1)" transform="translate(30.000000, 30.000000)" fill="#2C3F58">
+            <g id="icon-" fill-rule="nonzero">
+                <path d="M26.6484848,0.924369748 C40.9175145,0.924369748 52.4848485,12.3806129 52.4848485,26.512605 C52.4848485,40.6445972 40.9175145,52.1008403 26.6484848,52.1008403 C12.3794552,52.1008403 0.812121212,40.6445972 0.812121212,26.512605 C0.812121212,12.3806129 12.3794552,0.924369748 26.6484848,0.924369748 Z M26.6484848,4.86102133 C14.5746905,4.86102133 4.78694639,14.5547655 4.78694639,26.512605 C4.78694639,38.4704445 14.5746905,48.1641888 26.6484848,48.1641888 C38.7222791,48.1641888 48.5100233,38.4704445 48.5100233,26.512605 C48.5100233,14.5547655 38.7222791,4.86102133 26.6484848,4.86102133 Z M25.7080213,17.2230886 C26.4169246,17.9182933 26.4864975,19.0112532 25.9131676,19.7844715 L25.7215964,20.0064088 L17.8445827,27.8819213 L25.6919554,35.5648549 C26.4015188,36.2595497 26.4720178,37.3525693 25.8992763,38.126343 L25.7080213,38.3483117 C24.9363011,39.1213364 23.6779613,39.128402 22.8974406,38.3640933 L13.448905,29.1118102 C12.8392945,28.5164552 12.7733253,27.5820488 13.2538003,26.9127241 L13.435999,26.7002529 L13.435999,26.7002529 L22.8974296,17.2368149 C23.6697259,16.4643548 24.9280706,16.4582093 25.7080213,17.2230886 Z" id="Shape" style="mix-blend-mode: darken;"></path>
+            </g>
+            <line x1="16.4" y1="28" x2="41.8545455" y2="28" id="Line-3" stroke="#2C3F58" stroke-width="4" stroke-linecap="round"></line>
+        </g>
+    </g>
+</svg>
