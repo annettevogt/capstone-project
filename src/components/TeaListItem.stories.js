@@ -65,6 +65,7 @@ const StyledH3 = styled.h3`
   color: var(--primary-dark);
   font-size: 22px;
   line-height: 1.44;
+  font-weight: 500;
 `
 
 const StyledP = styled.p`

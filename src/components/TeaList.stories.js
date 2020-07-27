@@ -1,16 +1,7 @@
 import React from 'react'
-import GlobalStyles from './GlobalStyles'
-import { addDecorator } from '@storybook/react'
 import styled from 'styled-components'
 import TeaList from './TeaList'
 import TeaListItem from './TeaListItem'
-
-addDecorator((storyFn) => (
-  <>
-    <GlobalStyles />
-    {storyFn()}
-  </>
-))
 
 export default {
   title: 'TeaList',

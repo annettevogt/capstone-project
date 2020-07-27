@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers'
 import * as yup from 'yup'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import BackButton from '../icons/BackButton.svg'
+import { FiArrowLeftCircle } from 'react-icons/fi'
 
 const projectSchema = yup.object().shape({
   name: yup.string().min(5).max(30).required(),
@@ -22,11 +22,12 @@ export default function InputForm({ setTea }) {
   return (
     <main>
       <StyledForm onSubmit={handleSubmit}>
-        <StyledDiv>
-          <NavLink to="/tealistpage">
-            <StyledBackButton src={BackButton} alt="" />
-          </NavLink>
-        </StyledDiv>
+        <StyledLink to="/tealistpage">
+          <StyledBackButton>
+            <FiArrowLeftCircle />
+          </StyledBackButton>
+        </StyledLink>
+
         <StyledH2>Füge einen neuen Lieblingstee hinzu.</StyledH2>
         <StyledLabel htmlFor="name">
           Name des Tees:
@@ -131,19 +132,32 @@ export default function InputForm({ setTea }) {
   }
 }
 
-const StyledDiv = styled.div`
+const StyledLink = styled(NavLink)`
   display: flex;
   justify-content: flex-start;
   align-self: flex-start;
   height: 100%;
+  border-radius: 50%;
 `
 
-const StyledBackButton = styled.img`
-  height: 60px;
-  margin: 20px 0 0 10px;
+const StyledBackButton = styled.button`
+  position: relative;
+  height: 40px;
+  width: 40px;
+  font-size: 35px;
+  margin: 20px 0 0 22px;
+  border-radius: 50%;
+  border: solid 2px var(--secondary-medium-light);
+  box-shadow: 0 -1px 1px 0 grey;
+  background-color: var(--secondary-medium-light);
   :focus {
     outline: solid 1px var(--secondary-dark);
     box-shadow: 0 0 0 1pt var(--secondary-dark);
+  }
+  :active {
+    color: var(--secondary-medium-light);
+    background-color: var(--secondary-dark);
+  }
 `
 
 const StyledForm = styled.form`
@@ -185,7 +199,7 @@ const StyledInput = styled.input`
     outline: hidden 1px var(--secondary-dark);
     box-shadow: 0 0 0 1pt var(--secondary-dark);
   }
-  :-internal-autofill-selected {
+  ::-internal-autofill-selected {
     background-color: var(--secondary-medium-light) !important;
   }
 `
