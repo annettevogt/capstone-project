@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import TeaListItem from './TeaListItem'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { FiPlusCircle } from 'react-icons/fi'
 
 export default function TeaList({ teas }) {
@@ -28,7 +28,7 @@ const StyledTeaList = styled.ul`
   list-style: none;
 `
 
-const StyledLink = styled(NavLink)`
+const StyledLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-self: center;

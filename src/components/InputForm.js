@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { yupResolver } from '@hookform/resolvers'
 import * as yup from 'yup'
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { FiArrowLeftCircle } from 'react-icons/fi'
 
 const projectSchema = yup.object().shape({
@@ -123,7 +123,7 @@ export default function InputForm({ setTea }) {
   }
 }
 
-const StyledLink = styled(NavLink)`
+const StyledLink = styled(Link)`
   align-self: flex-start;
 `
 

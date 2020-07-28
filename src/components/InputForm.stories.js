@@ -10,7 +10,7 @@ export default {
   component: InputForm,
 }
 
-storiesOf('InputNewTea', module)
+storiesOf('InputForm', module)
   .addDecorator(
     StoryRouter({
       '/create': linkTo('LinkedStories', 'InputForm'),
