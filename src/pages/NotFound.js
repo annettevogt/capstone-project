@@ -14,5 +14,6 @@ const StyledDiv = styled.div`
   align-items: end;
   font-family: 'PTSans Regular', sans-serif;
   font-size: 32px;
-  color: black;
+  color: var(--primary-dark);
+  background-color: var(--secondary-light);
 `

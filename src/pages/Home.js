@@ -20,7 +20,7 @@ const HeaderStyled = styled.header`
   grid-template-rows: 1fr 1fr auto 1fr;
   height: 100%;
   width: 100%;
-  grid-gap: 5px;
+  grid-gap: 15px;
   align-items: end;
   opacity: 0.97;
   border: 1px solid var(--primary-light);
@@ -34,7 +34,7 @@ const HeaderStyled = styled.header`
 
 const HeadlineImg = styled.img`
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   grid-column-start: 3;
 `
 const HeadlineText = styled.div`

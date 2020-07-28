@@ -23,9 +23,9 @@ export default function InputForm({ setTea }) {
     <main>
       <StyledForm onSubmit={handleSubmit}>
         <StyledLink to="/tealistpage">
-          <StyledBackButton>
+          <StyledButton>
             <FiArrowLeftCircle />
-          </StyledBackButton>
+          </StyledButton>
         </StyledLink>
 
         <StyledH2>Füge einen neuen Lieblingstee hinzu.</StyledH2>
@@ -39,9 +39,6 @@ export default function InputForm({ setTea }) {
             type="text"
             placeholder="Z.B. Milky Oolong"
             autoFocus
-            minLength="5"
-            maxLength="30"
-            required
             data-testid="tea-name"
           />
           {newTea.name.length < 5 && (
@@ -60,9 +57,6 @@ export default function InputForm({ setTea }) {
             value={newTea.pointPurchase}
             type="text"
             placeholder="Z.B. Bioladen Macis, Leipzig"
-            minLength="10"
-            maxLength="30"
-            required
             data-testid="point-purchase"
           />
           {newTea.pointPurchase.length < 10 && (
@@ -85,9 +79,6 @@ export default function InputForm({ setTea }) {
             value={newTea.description}
             type="text"
             placeholder="Z.B. fruchtig-sahniges Bukett. Aromen von Aprikose und süßer Milch."
-            minLength="10"
-            maxLength="300"
-            required
             data-testid="tea-description"
           />
           {newTea.description.length < 10 && (
@@ -133,27 +124,19 @@ export default function InputForm({ setTea }) {
 }
 
 const StyledLink = styled(NavLink)`
-  display: flex;
-  justify-content: flex-start;
   align-self: flex-start;
-  height: 100%;
-  border-radius: 50%;
 `
 
-const StyledBackButton = styled.button`
-  position: relative;
+const StyledButton = styled.button`
   height: 40px;
   width: 40px;
-  font-size: 35px;
+  font-size: 39px;
   margin: 20px 0 0 22px;
-  border-radius: 50%;
-  border: solid 2px var(--secondary-medium-light);
   box-shadow: 0 -1px 1px 0 grey;
+  position: relative;
+  border-radius: 50%;
+  border: solid 0 var(--secondary-medium-light);
   background-color: var(--secondary-medium-light);
-  :focus {
-    outline: solid 1px var(--secondary-dark);
-    box-shadow: 0 0 0 1pt var(--secondary-dark);
-  }
   :active {
     color: var(--secondary-medium-light);
     background-color: var(--secondary-dark);
@@ -162,7 +145,6 @@ const StyledBackButton = styled.button`
 
 const StyledForm = styled.form`
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-flow: column wrap;
   background-color: var(--secondary-light);
@@ -170,14 +152,14 @@ const StyledForm = styled.form`
 
 const StyledH2 = styled.h2`
   margin: 1px 15px 15px 20px;
-  padding: 6px 5px;
+  padding: 20px 5px 5px;
 `
 
 const StyledLabel = styled.label`
   width: 90%;
   font-family: 'Didact Gothic', sans-serif;
   color: var(--primary-dark);
-  font-size: 21px;
+  font-size: 20px;
   padding: 15px 20px;
 `
 
@@ -188,7 +170,7 @@ const StyledInput = styled.input`
   border: 2px solid var(--tertiary-medium-dark);
   background-color: var(--secondary-medium-light);
   padding: 10px 15px;
-  margin: 2px 0;
+  margin: 3px -3px;
   font-family: 'Didact Gothic', sans-serif;
   font-size: 19px;
   opacity: 0.9;
@@ -215,7 +197,7 @@ const StyledTextarea = styled.textarea`
   font-size: 19px;
   border: 2px solid var(--tertiary-medium-dark);
   padding: 10px 15px;
-  margin: 2px 0 0 0;
+  margin: 3px -3px;
   ::-webkit-input-placeholder {
     color: var(--tertiary-medium-dark);
   }

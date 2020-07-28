@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import TeaListItem from './TeaListItem.js'
+import TeaListItem from './TeaListItem'
 import { NavLink } from 'react-router-dom'
 import { FiPlusCircle } from 'react-icons/fi'
 
@@ -16,9 +16,9 @@ export default function TeaList({ teas }) {
       </main>
 
       <StyledLink to="/inputnewtea">
-        <StyledButton>
+        <StyledAddButton>
           <FiPlusCircle alt="" />
-        </StyledButton>
+        </StyledAddButton>
       </StyledLink>
     </>
   )
@@ -37,16 +37,16 @@ const StyledLink = styled(NavLink)`
   background-color: var(--secondary-medium-light);
 `
 
-const StyledButton = styled.button`
+const StyledAddButton = styled.button`
   position: relative;
+  border-radius: 50%;
+  border: solid 2px var(--secondary-medium-light);
+  background-color: var(--secondary-medium-light);
   height: 50px;
   width: 50px;
   bottom: 13px;
-  border-radius: 50%;
-  border: solid 2px var(--secondary-medium-light);
   box-shadow: 0 -1px 2px 0 grey;
   font-size: 45px;
-  background-color: var(--secondary-medium-light);
   :active {
     color: var(--secondary-medium-light);
     background-color: var(--secondary-dark);
