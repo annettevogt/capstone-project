@@ -12,17 +12,13 @@ export default {
 
 addDecorator(StoryRouter({ '/NotFound': linkTo() }))
 
-export const NotFoundPage = () => <StyledDiv>404 - Page not found</StyledDiv>
+export const NotFoundPage = () => (
+  <AppGrid>
+    <NotFound />
+  </AppGrid>
+)
 
-const StyledDiv = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 1fr auto 1fr;
-  justify-content: center;
-  align-items: end;
-  height: 100%;
-  width: 100%;
-  font-family: 'PTSans Regular', sans-serif;
-  font-size: 30px;
-  color: var(--primary-dark);
-  background-color: var(--secondary-light);
+const AppGrid = styled.div`
+  height: 667px;
+  width: 375px;
 `

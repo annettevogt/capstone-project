@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import InputForm from './InputForm'
 import StoryRouter from 'storybook-react-router'
 import { storiesOf } from '@storybook/react'
@@ -16,4 +17,13 @@ storiesOf('InputForm', module)
       '/create': linkTo('LinkedStories', 'InputForm'),
     })
   )
-  .add('InputNewTea', () => <InputForm tea={testMock[0]} />)
+  .add('InputNewTea', () => (
+    <AppGrid>
+      <InputForm tea={testMock[0]} />
+    </AppGrid>
+  ))
+
+const AppGrid = styled.div`
+  height: 667px;
+  width: 375px;
+`

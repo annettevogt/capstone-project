@@ -18,19 +18,25 @@ export default {
 }
 
 export const withExampleData = () => (
-  <StyledListItem key={'1'}>
-    <StyledH2>{'Vietnamese Oolong'}</StyledH2>
-    <StyledImg src={MapPinIcon} alt="" />
-    <StyledH3>Hier gekauft: {'Connewitzer Teeladen, Leipzig'}</StyledH3>
-    <StyledP>
-      {
-        'Duftiges Aroma von Orchidee. Subtiles, lang anhaltendes Bukett von Veilchen. Tee mit edlem Charakter.'
-      }
-    </StyledP>
-    <StyledLine />
-  </StyledListItem>
+  <AppGrid>
+    <StyledListItem key={'1'}>
+      <StyledH2>{'Vietnamese Oolong'}</StyledH2>
+      <StyledImg src={MapPinIcon} alt="" />
+      <StyledH3>Hier gekauft: {'Connewitzer Teeladen, Leipzig'}</StyledH3>
+      <StyledP>
+        {
+          'Duftiges Aroma von Orchidee. Subtiles, lang anhaltendes Bukett von Veilchen. Tee mit edlem Charakter.'
+        }
+      </StyledP>
+      <StyledLine />
+    </StyledListItem>
+  </AppGrid>
 )
 
+const AppGrid = styled.div`
+  height: 667px;
+  width: 375px;
+`
 const StyledListItem = styled.li`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
