@@ -4,6 +4,7 @@ import * as yup from 'yup'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FiArrowLeftCircle } from 'react-icons/fi'
+import { action } from '@storybook/addon-actions'
 
 const projectSchema = yup.object().shape({
   name: yup.string().min(5).max(30).required(),
@@ -92,7 +93,9 @@ export default function InputForm({ setTea }) {
             </StyledError>
           )}
         </StyledLabel>
-        <StyledAddButton type="submit">Add</StyledAddButton>
+        <StyledAddButton type="submit" onClick={action('clicked')}>
+          Add
+        </StyledAddButton>
         <StyledLine></StyledLine>
       </StyledForm>
     </main>
