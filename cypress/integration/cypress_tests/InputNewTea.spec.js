@@ -1,7 +1,11 @@
 describe('My First Test', () => {
-  it('Visits InputNewTea Page via Button on tealistpage', () => {
-    cy.visit('http://localhost:3000/tealistpage')
+  it('Visits InputNewTea Page via Button on InputNewTea', () => {
+    cy.visit('http://localhost:3000/inputnewtea')
     cy.contains('TasTEA')
+    cy.get('.name').type('Lieblingstee-Test')
+    cy.get('.pointPurchase').type('Bioladen Macis, Leipzig')
+    cy.get('.description').type('Teebeschreibung von Lieblingstee-Test')
+    cy.get('.button').contains('Add').should('be.visible').click()
     cy.contains('Hier gekauft')
   })
 })

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <Link to="/inputnewtea">
+    <Link to="/tealistpage">
       <HeaderStyled>
         <HeadlineText>TasTEA</HeadlineText>
         <HeadlineImg src={TeaHeaderIcon} alt="" />

@@ -41,6 +41,7 @@ export default function InputForm({ setTea }) {
             placeholder="Z.B. Milky Oolong"
             autoFocus
             data-testid="tea-name"
+            className="name"
           />
           {newTea.name.length < 5 && (
             <StyledError>Your name requires at least 5 characters.</StyledError>
@@ -59,6 +60,7 @@ export default function InputForm({ setTea }) {
             type="text"
             placeholder="Z.B. Bioladen Macis, Leipzig"
             data-testid="point-purchase"
+            className="pointPurchase"
           />
           {newTea.pointPurchase.length < 10 && (
             <StyledError>
@@ -81,6 +83,7 @@ export default function InputForm({ setTea }) {
             type="text"
             placeholder="Z.B. fruchtig-sahniges Bukett. Aromen von Aprikose und süßer Milch."
             data-testid="tea-description"
+            className="description"
           />
           {newTea.description.length < 10 && (
             <StyledError>
@@ -93,7 +96,7 @@ export default function InputForm({ setTea }) {
             </StyledError>
           )}
         </StyledLabel>
-        <StyledAddButton type="submit" onClick={action('clicked')}>
+        <StyledAddButton className="button" type="submit">
           Add
         </StyledAddButton>
         <StyledLine></StyledLine>
