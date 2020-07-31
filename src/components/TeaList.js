@@ -16,7 +16,7 @@ export default function TeaList({ teas }) {
       </main>
 
       <StyledLink to="/inputnewtea">
-        <StyledAddButton>
+        <StyledAddButton data-cy="submit">
           <FiPlusCircle alt="" />
         </StyledAddButton>
       </StyledLink>

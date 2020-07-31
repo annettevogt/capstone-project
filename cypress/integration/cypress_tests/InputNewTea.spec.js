@@ -1,14 +1,17 @@
-describe('My First Test', () => {
-  it('Visits InputNewTea Page via Button on InputNewTea', () => {
+describe('Test InputNewTea Page', () => {
+  it('visits InputNewTea Page', () => {
     cy.visit('http://localhost:3000/inputnewtea')
-    cy.contains('TasTEA')
+  })
+  it('scans InputNewTea Page', () => {
+    cy.contains('TasTEA').should('be.visible')
+    cy.contains('Name des Tees:').should('be.visible')
+    cy.contains('Hier gekauft:').should('be.visible')
+    cy.contains('Beschreibe Deinen Lieblingstee:').should('be.visible')
+  })
+  it('enters a new tea and clicks the button', () => {
     cy.get('.name').type('Lieblingstee-Test')
     cy.get('.pointPurchase').type('Bioladen Macis, Leipzig')
     cy.get('.description').type('Teebeschreibung von Lieblingstee-Test')
     cy.get('.button').contains('Add').should('be.visible').click()
-    cy.contains('Hier gekauft')
   })
 })
-
-// Ich könnte testen, ob etwas in der teas.json ankommt,
-// also auf der Seite TeaListPage, wenn ich etwas in die Eingabefelder eingebe.
