@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "0.0.6",
+    "@storybook/addon-knobs": "^5.3.19",
     "@testing-library/user-event": "^7.2.1",
     "pretty": "^2.0.0",
     "react": "^16.13.1",

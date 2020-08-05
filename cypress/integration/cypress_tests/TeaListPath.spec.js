@@ -1,8 +1,8 @@
-describe('Test TeaListPage Page', () => {
-  it('visits TeaListPage', () => {
+describe('Test TeaList Path', () => {
+  it('visits TeaList Path', () => {
     cy.visit('http://localhost:3000/tealistpage')
   })
-  it('scans InputNewTea Page', () => {
+  it('scans TeaList Path', () => {
     cy.contains('TasTEA').should('be.visible')
     cy.contains('Hier gekauft:').should('be.visible')
   })

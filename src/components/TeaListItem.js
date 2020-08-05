@@ -19,7 +19,7 @@ export default function TeaListItem({
 const StyledListItem = styled.li`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  background-color: var(--secondary-light);
+  background-color: var(--dark-green-transparent);
 `
 
 const StyledH2 = styled.h2`
@@ -52,13 +52,13 @@ const StyledP = styled.p`
   align-self: center;
   padding: 12px;
   border-radius: 5px;
-  background-color: var(--secondary-medium-light);
+  background-color: var(--light-green);
   font-size: 19px;
-  color: var(--tertiary-medium-dark);
+  color: var(--dark-orange-brown);
 `
 const StyledLine = styled.div`
   grid-column-start: 1;
   grid-column-end: 8;
-  border-bottom: solid 1px var(--primary-light);
+  border-bottom: solid 1px var(--medium-grey);
   padding: 15px 0px;
 `

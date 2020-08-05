@@ -10,7 +10,7 @@ export default {
   component: Home,
 }
 
-addDecorator(StoryRouter({ '/': linkTo('InputNewTea') }))
+addDecorator(StoryRouter({ '/': linkTo('tealistpage') }))
 
 export const HomeWithLogo = () => (
   <AppGrid>

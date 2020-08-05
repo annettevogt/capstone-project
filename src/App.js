@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
-import jsonteas from './components/teas.json'
+import teaList from './components/teas.json'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import InputNewTea from './pages/InputNewTea'
@@ -11,26 +11,24 @@ import TeaListPage from './pages/TeaListPage'
 export default function App() {
   const [teas, setTeas] = useState([])
 
-  useEffect(function () {
-    setTeas(jsonteas)
+  useEffect(() => {
+    setTeas(teaList)
   }, [])
 
   return (
     <AppGrid>
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Home}></Route>
-          <Route path="/inputnewtea">
-            <Header />
-            <InputNewTea setTea={updateTeas} />
-          </Route>
-          <Route path="/tealistpage">
-            <Header />
-            <TeaListPage teasjson={teas} />
-          </Route>
-          <Route component={NotFound} />
-        </Switch>
-      </Router>
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+        <Route path="/inputnewteapage">
+          <Header />
+          <InputNewTea setTea={updateTeas} />
+        </Route>
+        <Route path="/tealistpage">
+          <Header />
+          <TeaListPage teasState={teaList} />
+        </Route>
+        <Route component={NotFound} />
+      </Switch>
     </AppGrid>
   )
 

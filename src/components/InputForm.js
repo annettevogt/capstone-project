@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 import { yupResolver } from '@hookform/resolvers'
 import * as yup from 'yup'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import { FiArrowLeftCircle } from 'react-icons/fi'
-import { action } from '@storybook/addon-actions'
 
 const projectSchema = yup.object().shape({
   name: yup.string().min(5).max(30).required(),
@@ -23,12 +20,6 @@ export default function InputForm({ setTea }) {
   return (
     <main>
       <StyledForm onSubmit={handleSubmit}>
-        <StyledLink to="/tealistpage">
-          <StyledButton>
-            <FiArrowLeftCircle />
-          </StyledButton>
-        </StyledLink>
-
         <StyledH2>Füge einen neuen Lieblingstee hinzu.</StyledH2>
         <StyledLabel htmlFor="name">
           Name des Tees:
@@ -129,31 +120,11 @@ export default function InputForm({ setTea }) {
   }
 }
 
-const StyledLink = styled(Link)`
-  align-self: flex-start;
-`
-
-const StyledButton = styled.button`
-  height: 40px;
-  width: 40px;
-  font-size: 39px;
-  margin: 20px 0 0 22px;
-  box-shadow: 0 -1px 1px 0 grey;
-  position: relative;
-  border-radius: 50%;
-  border: solid 0 var(--secondary-medium-light);
-  background-color: var(--secondary-medium-light);
-  :active {
-    color: var(--secondary-medium-light);
-    background-color: var(--secondary-dark);
-  }
-`
-
 const StyledForm = styled.form`
   display: flex;
   align-items: center;
   flex-flow: column wrap;
-  background-color: var(--secondary-light);
+  background-color: var(--dark-green-transparent);
 `
 
 const StyledH2 = styled.h2`
@@ -164,7 +135,7 @@ const StyledH2 = styled.h2`
 const StyledLabel = styled.label`
   width: 90%;
   font-family: 'Didact Gothic', sans-serif;
-  color: var(--primary-dark);
+  color: var(--dark-blue);
   font-size: 20px;
   padding: 15px 20px;
 `
@@ -173,22 +144,22 @@ const StyledInput = styled.input`
   box-sizing: border-box;
   width: 100%;
   border-radius: 5px;
-  border: 2px solid var(--tertiary-medium-dark);
-  background-color: var(--secondary-medium-light);
+  border: 2px solid var(--dark-orange-brown);
+  background-color: var(--light-green);
   padding: 10px 15px;
   margin: 3px -3px;
   font-family: 'Didact Gothic', sans-serif;
   font-size: 19px;
   opacity: 0.9;
   ::-webkit-input-placeholder {
-    color: var(--tertiary-medium-dark);
+    color: var(--dark-orange-brown);
   }
   :focus {
-    outline: hidden 1px var(--secondary-dark);
-    box-shadow: 0 0 0 1pt var(--secondary-dark);
+    outline: hidden 1px var(--dark-green);
+    box-shadow: 0 0 0 1pt var(--dark-green);
   }
   ::-internal-autofill-selected {
-    background-color: var(--secondary-medium-light) !important;
+    background-color: var(--light-green) !important;
   }
 `
 
@@ -197,24 +168,24 @@ const StyledTextarea = styled.textarea`
   height: 100px;
   box-sizing: border-box;
   border-radius: 5px;
-  color: var(--tertiary-medium-dark);
-  background-color: var(--secondary-medium-light);
+  color: var(--dark-orange-brown);
+  background-color: var(--light-green);
   font-family: 'Didact Gothic', sans-serif;
   font-size: 19px;
-  border: 2px solid var(--tertiary-medium-dark);
+  border: 2px solid var(--dark-orange-brown);
   padding: 10px 15px;
   margin: 3px -3px;
   ::-webkit-input-placeholder {
-    color: var(--tertiary-medium-dark);
+    color: var(--dark-orange-brown);
   }
   :focus {
-    outline: hidden 1px var(--secondary-dark);
-    box-shadow: 0 0 0 1pt var(--secondary-dark);
+    outline: hidden 1px var(--dark-green);
+    box-shadow: 0 0 0 1pt var(--dark-green);
   }
 `
 const StyledLine = styled.div`
   display: block;
-  border-bottom: solid 1px var(--primary-light);
+  border-bottom: solid 1px var(--medium-grey);
   padding: 20px 0;
   width: 100%;
 `
@@ -225,22 +196,22 @@ const StyledAddButton = styled.button`
   width: 126px;
   height: 40px;
   border-radius: 10px;
-  background: var(--tertiary-dark);
-  border: 2px solid var(--tertiary-medium-dark);
-  color: var(--secondary-medium-light);
+  background: var(--dark-brown);
+  border: 2px solid var(--dark-orange-brown);
+  color: var(--light-green);
   font-family: 'Didact Gothic';
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.39px;
   :active {
-    background-color: var(--secondary-light);
-    color: var(--tertiary-dark);
+    background-color: var(--dark-green-transparent);
+    color: var(--dark-brown);
   }
 `
 
 const StyledError = styled.p`
   font-family: 'Didact Gothic', sans-serif;
-  color: var(--tertiary-medium-dark);
+  color: var(--dark-orange-brown);
   font-size: 16px;
   margin: 1px 10px;
 `

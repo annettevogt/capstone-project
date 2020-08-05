@@ -17,11 +17,11 @@ const HeaderStyled = styled.header`
   grid-gap: 5px;
   align-items: center;
   opacity: 0.97;
-  border: 1px solid var(--primary-light);
-  background-color: var(--secondary-dark);
+  border: 1px solid var(--medium-grey);
+  background-color: var(--dark-green);
   font-family: 'PTSans Regular', sans-serif;
   font-size: 32px;
-  color: var(--secondary-medium-light);
+  color: var(--light-green);
   line-height: 2;
 `
 

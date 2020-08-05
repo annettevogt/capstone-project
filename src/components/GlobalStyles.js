@@ -2,13 +2,13 @@ import { createGlobalStyle } from 'styled-components/macro'
 
 export default createGlobalStyle`
 :root{
-  --secondary-dark: #837e47;
-  --secondary-medium-light: #dcdbce;
-  --secondary-light: rgba(131, 126, 71, 0.15);
-  --primary-dark: #2c3f58;
-  --primary-light: #979797;
-  --tertiary-dark: #292827;
-  --tertiary-medium-dark: #504831;
+  --dark-green: #837e47;
+  --light-green: #dcdbce;
+  --dark-green-transparent: rgba(131, 126, 71, 0.15);
+  --dark-blue: #2c3f58;
+  --medium-grey: #979797;
+  --dark-brown: #292827;
+  --dark-orange-brown: #504831;
 
   scroll-behavior: smooth;
 }
@@ -30,7 +30,7 @@ main {
 }
 
 h2 {
-  color: var(--primary-dark);
+  color: var(--dark-blue);
   font-size: 26px;
   line-height: 1.64;
   font-stretch: normal;
@@ -38,7 +38,7 @@ h2 {
 
 h3 {
   font-family: 'Didact Gothic', sans-serif;
-  color: var(--primary-dark);
+  color: var(--dark-blue);
   font-size: 22px;
   line-height: 1.44;
 }

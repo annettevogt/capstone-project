@@ -1,8 +1,8 @@
-describe('Test InputNewTea Page', () => {
-  it('visits InputNewTea Page', () => {
-    cy.visit('http://localhost:3000/inputnewtea')
+describe('Test InputNewTea', () => {
+  it('visits InputNewTea', () => {
+    cy.visit('http://localhost:3000/inputnewteapage')
   })
-  it('scans InputNewTea Page', () => {
+  it('scans InputNewTea', () => {
     cy.contains('TasTEA').should('be.visible')
     cy.contains('Name des Tees:').should('be.visible')
     cy.contains('Hier gekauft:').should('be.visible')
