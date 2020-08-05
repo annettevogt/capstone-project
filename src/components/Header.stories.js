@@ -1,18 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import Header from './Header'
-import { addDecorator } from '@storybook/react'
-import GlobalStyles from './GlobalStyles'
-
-addDecorator((storyFn) => (
-  <>
-    <GlobalStyles />
-    {storyFn()}
-  </>
-))
 
 export default {
   title: 'Header',
   component: Header,
 }
 
-export const withLogo = () => <Header />
+export const withLogo = () => (
+  <AppGrid>
+    <Header />
+  </AppGrid>
+)
+
+const AppGrid = styled.div`
+  height: 667px;
+  width: 375px;
+`

@@ -19,8 +19,7 @@ export default function TeaListItem({
 const StyledListItem = styled.li`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 1fr auto auto;
-  background-color: var(--secondary-light);
+  background-color: var(--dark-green-transparent);
 `
 
 const StyledH2 = styled.h2`
@@ -30,11 +29,6 @@ const StyledH2 = styled.h2`
   align-self: center;
   padding: 6px 5px;
   margin: 15px;
-  color: var(--primary-dark);
-  font-size: 26px;
-  font-weight: normal;
-  line-height: 1.64;
-  font-stretch: normal;
 `
 
 const StyledImg = styled.img`
@@ -48,11 +42,6 @@ const StyledH3 = styled.h3`
   grid-column-end: 7;
   grid-row-start: 2;
   margin-bottom: 18px;
-  font-family: DidactGothic, sans-serif;
-  color: var(--primary-dark);
-  font-size: 22px;
-  font-weight: normal;
-  line-height: 1.44;
 `
 
 const StyledP = styled.p`
@@ -63,14 +52,13 @@ const StyledP = styled.p`
   align-self: center;
   padding: 12px;
   border-radius: 5px;
-  background-color: var(--secondary-medium-light);
+  background-color: var(--light-green);
   font-size: 19px;
-  font-weight: normal;
-  color: var(--tertiary-dark);
+  color: var(--dark-orange-brown);
 `
 const StyledLine = styled.div`
   grid-column-start: 1;
   grid-column-end: 8;
-  border-bottom: solid 1px var(--primary-light);
+  border-bottom: solid 1px var(--medium-grey);
   padding: 15px 0px;
 `

@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hookform/resolvers": "0.0.6",
+    "@storybook/addon-knobs": "^5.3.19",
     "@testing-library/user-event": "^7.2.1",
     "pretty": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^6.0.5",
+    "react-icons": "^3.10.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "yup": "^0.29.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,7 +48,8 @@
     "@storybook/react": "^5.3.19",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
-    "cypress": "^4.9.0",
-    "msw": "^0.19.5"
+    "cypress": "^4.11.0",
+    "msw": "^0.19.5",
+    "storybook-react-router": "^1.0.8"
   }
 }
