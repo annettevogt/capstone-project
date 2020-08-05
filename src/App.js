@@ -5,6 +5,7 @@ import Header from './components/Header'
 import teaList from './components/teas.json'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import TeaList from './components/TeaList'
 import InputNewTea from './pages/InputNewTea'
 import TeaListPage from './pages/TeaListPage'
 
@@ -25,7 +26,7 @@ export default function App() {
         </Route>
         <Route path="/tealistpage">
           <Header />
-          <TeaListPage teasState={teaList} />
+          <TeaListPage teasState={teas} />
         </Route>
         <Route component={NotFound} />
       </Switch>
