@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { yupResolver } from '@hookform/resolvers'
 import * as yup from 'yup'
 import styled from 'styled-components'
+import { v4 as uuid } from 'uuid'
 
 const projectSchema = yup.object().shape({
   name: yup.string().min(5).max(30).required(),
@@ -14,6 +15,7 @@ export default function InputForm({ setTea }) {
     name: '',
     pointPurchase: '',
     description: '',
+    id: uuid(),
     resolver: yupResolver(projectSchema),
   })
 
@@ -108,6 +110,7 @@ export default function InputForm({ setTea }) {
         name: '',
         pointPurchase: '',
         description: '',
+        id: uuid(),
       })
     } catch (error) {}
   }

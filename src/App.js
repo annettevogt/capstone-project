@@ -2,19 +2,22 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
-import teaList from './components/teas.json'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
-import TeaList from './components/TeaList'
 import InputNewTea from './pages/InputNewTea'
 import TeaListPage from './pages/TeaListPage'
+import { v4 as uuid } from 'uuid'
 
 export default function App() {
   const [teas, setTeas] = useState([])
 
   useEffect(() => {
-    setTeas(teaList)
+    setTeas(JSON.parse(localStorage.getItem('myTeaList') || '[]'))
   }, [])
+
+  useEffect(() => {
+    localStorage.setItem('myTeaList', JSON.stringify(teas))
+  }, [teas])
 
   return (
     <AppGrid>
@@ -34,6 +37,7 @@ export default function App() {
   )
 
   function updateTeas(newTea) {
+    newTea.id = uuid()
     setTeas([...teas, newTea])
   }
 }
