@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import TeaHeaderIcon from '../icons/TeaHeaderIcon.svg'
+import teaHeaderIcon from '../icons/teaHeaderIcon.svg'
 import { Link } from 'react-router-dom'
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
     <Link to="/tealistpage">
       <HeaderStyled>
         <HeadlineText>TasTEA</HeadlineText>
-        <HeadlineImg src={TeaHeaderIcon} alt="" />
+        <HeadlineImg src={teaHeaderIcon} alt="" />
       </HeaderStyled>
     </Link>
   )

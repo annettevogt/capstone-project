@@ -6,16 +6,21 @@ import { FiPlusCircle } from 'react-icons/fi'
 
 export default function TeaListPage({ teasState }) {
   return (
-    <>
+    <Grid>
       <TeaList teas={teasState} />
       <StyledLink to="/inputnewteapage">
         <StyledAddButton data-cy="submit">
           <FiPlusCircle alt="" />
         </StyledAddButton>
       </StyledLink>
-    </>
+    </Grid>
   )
 }
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-rows: auto 50px;
+`
 
 const StyledLink = styled(Link)`
   display: flex;

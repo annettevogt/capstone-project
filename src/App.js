@@ -44,4 +44,5 @@ export default function App() {
 const AppGrid = styled.div`
   display: grid;
   height: 100vh;
+  grid-template-rows: 66px auto;
 `
