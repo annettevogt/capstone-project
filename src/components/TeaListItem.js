@@ -19,7 +19,6 @@ export default function TeaListItem({
 const StyledListItem = styled.li`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  background-color: var(--dark-green-transparent);
 `
 
 const StyledH2 = styled.h2`

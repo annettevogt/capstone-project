@@ -7,20 +7,17 @@ import { FiArrowLeftCircle } from 'react-icons/fi'
 export default function InputNewTea({ setTea }) {
   return (
     <>
-      <StyledLink to="/tealistpage">
+      <Link to="/tealistpage">
         <StyledButton>
           <FiArrowLeftCircle />
         </StyledButton>
-      </StyledLink>
+      </Link>
 
       <InputForm setTea={setTea} />
     </>
   )
 }
 
-const StyledLink = styled(Link)`
-  background-color: var(--dark-green-transparent);
-`
 const StyledButton = styled.button`
   height: 40px;
   width: 40px;
