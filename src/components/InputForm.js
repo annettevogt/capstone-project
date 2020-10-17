@@ -127,7 +127,6 @@ const StyledForm = styled.form`
   display: flex;
   align-items: center;
   flex-flow: column wrap;
-  background-color: var(--dark-green-transparent);
 `
 
 const StyledH2 = styled.h2`
