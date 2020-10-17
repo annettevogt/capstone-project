@@ -4,13 +4,11 @@ import TeaListItem from './TeaListItem'
 
 export default function TeaList({ teas }) {
   return (
-    <main>
-      <StyledTeaList>
-        {teas.map((tea) => (
-          <TeaListItem tea={tea} key={tea.id} />
-        ))}
-      </StyledTeaList>
-    </main>
+    <StyledTeaList>
+      {teas.map((tea) => (
+        <TeaListItem tea={tea} key={tea.id} />
+      ))}
+    </StyledTeaList>
   )
 }
 

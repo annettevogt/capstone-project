@@ -19,7 +19,8 @@ export default function TeaListPage({ teasState }) {
 
 const Grid = styled.div`
   display: grid;
-  grid-template-rows: auto 50px;
+  grid-template-rows: 66px auto 50px;
+  position: relative;
 `
 
 const StyledLink = styled(Link)`
@@ -29,6 +30,10 @@ const StyledLink = styled(Link)`
   height: 50px;
   box-shadow: 0 -1px 5px 0 grey;
   background-color: var(--light-green);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
 `
 
 const StyledAddButton = styled.button`

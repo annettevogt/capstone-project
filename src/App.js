@@ -21,18 +21,20 @@ export default function App() {
 
   return (
     <AppGrid>
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/inputnewteapage">
-          <Header />
-          <InputNewTea setTea={updateTeas} />
-        </Route>
-        <Route path="/tealistpage">
-          <Header />
-          <TeaListPage teasState={teas} />
-        </Route>
-        <Route component={NotFound} />
-      </Switch>
+      <Main>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/inputnewteapage">
+            <Header />
+            <InputNewTea setTea={updateTeas} />
+          </Route>
+          <Route path="/tealistpage">
+            <Header />
+            <TeaListPage teasState={teas} />
+          </Route>
+          <Route component={NotFound} />
+        </Switch>
+      </Main>
     </AppGrid>
   )
 
@@ -44,5 +46,10 @@ export default function App() {
 const AppGrid = styled.div`
   display: grid;
   height: 100vh;
-  grid-template-rows: 66px auto;
+  grid-template-rows: auto;
+`
+const Main = styled.main`
+  overflow-y: scroll;
+  position: relative;
+  background-color: var(--dark-green-transparent); ;
 `
